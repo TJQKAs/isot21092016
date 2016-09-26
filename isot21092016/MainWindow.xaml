@@ -1,0 +1,71 @@
+﻿<Window x:Class="isot21092016.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:isot21092016"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="380" Width="535">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="280"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+            <StackPanel Grid.Column="0" Grid.Row="0">
+            <Label Content="Fields to input your data" Background="LightPink" HorizontalContentAlignment="Center"/>
+            <StackPanel Orientation="Horizontal">
+                <Label Width="100" Content="For x - meaning"/>
+                    <TextBox x:Name="tbx1" Width="120"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Width="100" Content="For A - meaning"/>
+                <TextBox x:Name="tbx2" Width="120"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button Width="130" Content="Var '1' with our data" Background="Aqua" Click="Button_Click"/>
+                <Button Width="130" Content="Var '4' with our data" Background="LawnGreen" Click="Button_Click_1"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button Width="130" Content="Var '1' with default data" Background="LightSeaGreen" Click="Button_Click_3"/>
+                <Button Width="130" Content="Var '4' with default data" Background="DeepSkyBlue" Click="Button_Click_4"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button Width="260" Content="Reset all" Background="LightCyan" Click="Button_Click_2"/>
+            </StackPanel>
+            <StackPanel Orientation="Vertical">
+                <Label Content="Case First"/>
+                <Image Source="1.png" Height="40" VerticalAlignment="Stretch"/>
+                    <Label Content="Case Fourth"/>
+                <Image Source="4.png" Height="40" VerticalAlignment="Stretch"/>
+            </StackPanel>
+        </StackPanel>
+        <Grid Grid.Row="0" Grid.Column="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <StackPanel Grid.Column="0" Orientation="Vertical">
+                <Label Content="Result of Case First" Background="Red"/>
+                <StackPanel x:Name="stpd1">
+                </StackPanel>
+            </StackPanel>
+            <StackPanel Grid.Column="1" Orientation="Vertical">
+                <Label Content="Result of Case Fourth" Background="Gold"/>
+                <StackPanel x:Name="stpd2">
+                </StackPanel>
+            </StackPanel>
+        </Grid>
+        <StackPanel Orientation="Vertical" Grid.Column="0" Grid.Row="1">
+            <Label Content="Result of Case One, with input data" Background="Red" HorizontalContentAlignment="Center"/>
+            <TextBlock x:Name="tbl1" VerticalAlignment="Stretch" FontSize="18" Foreground="Red" TextAlignment="Center"/>
+        </StackPanel>
+        <StackPanel Orientation="Vertical" Grid.Column="1" Grid.Row="1">
+            <Label Content="Result of Case Four, with input data" Background="Gold" HorizontalContentAlignment="Center"/>
+            <TextBlock x:Name="tbl2" VerticalAlignment="Stretch" FontSize="18" Foreground="Red" TextAlignment="Center"/>
+        </StackPanel>
+    </Grid>
+</Window>
